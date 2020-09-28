@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     lang: `en`,
-    title: `Zoova Foundation: Zoova Foundation: Official website of the Zoova Foundation`,
+    title: `Zoova Foundation: Official website of the Zoova Foundation`,
     titleSimplified: `Zoova Foundation`,
     description: `Official website of the Zoova Foundation.`,
     author: `Devmaroy`,
