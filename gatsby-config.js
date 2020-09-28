@@ -22,4 +22,27 @@ module.exports = {
       author: 'devmaroy',
     },
   },
+  plugins: [
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-no-sourcemaps`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-catch-links`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        includePaths: ['node_modules/normalize-scss/sass'],
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+  ],
 };
