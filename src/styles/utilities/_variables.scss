@@ -4,8 +4,6 @@
 
 // Font Family
 $ff-base: 'Poppins', sans-serif;
-$ff-mainpost-heading: 'Lora', serif;
-$ff-mainpost-base: 'Source Sans Pro', sans-serif;
 
 // Font Weight
 $fw-thin: 100;
@@ -28,20 +26,22 @@ $fs-sm: 1.4rem;
 $fs-xs: 1.2rem;
 
 // Colors
-$clr-primary: #2fe6a3;
-$clr-primary-dk: #2f5d58;
-$clr-secondary: #2c2f3e;
-$clr-secondary-off: #282b37;
-$clr-secondary-off-dk: #292c3b;
+$clr-primary: red;
+$clr-primary-dk: red;
+$clr-secondary: red;
+$clr-secondary-off: red;
+$clr-secondary-off-dk: red;
+$clr-selection-bg: red;
+$clr-selection-base: red;
 
 // Other colors
-$clr-input: #242732;
-$clr-light: #fff;
-// $clr-dark: #2c2f3e;
-$clr-base: #caccdb;
-$clr-danger: #e62f5b;
-// $clr-success: #333;
-$clr-nav: #292c3c;
+$clr-input: red;
+$clr-light: red;
+$clr-dark: red;
+$clr-base: red;
+$clr-danger: red;
+$clr-success: red;
+$clr-nav: red;
 
 // Border Radius
 $border-radius: 0.6rem;

@@ -4,18 +4,6 @@
 
 @include base-styles;
 
-// move selection to another mixin
-
-// ::selection {
-//   background: $clr-primary;
-//   color: $clr-secondary;
-// }
-
-// @include scrollbar-style(
-//   $mainColor: $clr-primary,
-//   $secondaryColor: lighten($clr-secondary, 10%)
-// );
-
 // body {
 //   background: $clr-secondary;
 //   color: $clr-base;

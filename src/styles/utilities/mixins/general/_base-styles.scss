@@ -35,6 +35,6 @@
   }
 
   .dont-break-out {
-    @include dont-break-out;
+    @include text-dont-break-out;
   }
 }
