@@ -1,7 +1,8 @@
 import React from 'react';
+import Layout from '../components/layout/layout';
 
 const IndexPage = () => {
-  return <div>hello there</div>;
+  return <Layout />;
 };
 
 export default IndexPage;

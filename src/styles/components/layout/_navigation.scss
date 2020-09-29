@@ -1,0 +1,77 @@
+/*------------------------------------*\
+  # Navigation
+\*------------------------------------*/
+
+.navigation-toggle {
+  @include reset-appearance;
+  position: absolute;
+  top: 0.5rem;
+  right: 2.4rem;
+  line-height: 1;
+}
+
+.navigation-toggle__bar {
+  width: 3.2rem;
+  height: 0.3rem;
+  background: $clr-dark;
+
+  transition: all $transition;
+}
+
+.navigation-toggle__bar--one {
+  margin-bottom: 0.3rem;
+
+  &.is-open {
+    transform: rotate(-45deg);
+  }
+}
+
+.navigation-toggle__bar--two {
+  &.is-open {
+    opacity: 0;
+  }
+}
+
+.navigation-toggle__bar--three {
+  margin-top: 0.3rem;
+
+  &.is-open {
+    width: 3rem;
+    transform: translateY(-12px) rotate(45deg);
+  }
+}
+
+.navigation {
+  margin-top: 1.6rem;
+  border-top: 0.1rem solid $clr-lightgray;
+  opacity: 0;
+
+  transition: all $transition;
+
+  &.is-open {
+    opacity: 1;
+  }
+}
+
+.navigation__list {
+  @include list-unstyled;
+  margin-top: 2.4rem;
+}
+
+.navigation__item {
+  &:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.navigation__link {
+  @include link-reset;
+  @include link($clr-dark, $clr-primary);
+  text-transform: uppercase;
+  font-size: $fs-sm;
+  font-weight: $fw-bold;
+
+  &--active {
+    color: $clr-primary;
+  }
+}

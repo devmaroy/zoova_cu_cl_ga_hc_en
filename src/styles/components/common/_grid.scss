@@ -1,7 +1,7 @@
 /*------------------------------------*\
-  # General
+  # Grid
 \*------------------------------------*/
 
-// Styles
-@import 'base-styles';
-@import 'reset-appearance';
+.container {
+  @include grid-container;
+}

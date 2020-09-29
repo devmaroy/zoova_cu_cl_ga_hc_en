@@ -1,9 +1,10 @@
 /*------------------------------------*\
-    # Variables
+# Variables
 \*------------------------------------*/
 
 // Font Family
-$ff-base: 'Poppins', sans-serif;
+$ff-heading: 'Proza Libre', sans-serif;
+$ff-base: 'Open Sans', sans-serif;
 
 // Font Weight
 $fw-thin: 100;
@@ -26,7 +27,7 @@ $fs-sm: 1.4rem;
 $fs-xs: 1.2rem;
 
 // Colors
-$clr-primary: red;
+$clr-primary: #418ef4;
 $clr-primary-dk: red;
 $clr-secondary: red;
 $clr-secondary-off: red;
@@ -36,8 +37,11 @@ $clr-selection-base: red;
 
 // Other colors
 $clr-input: red;
-$clr-light: red;
-$clr-dark: red;
+$clr-light: #fff;
+$clr-dark: #000004;
+
+$clr-lightgray: #efeff7;
+
 $clr-base: red;
 $clr-danger: red;
 $clr-success: red;

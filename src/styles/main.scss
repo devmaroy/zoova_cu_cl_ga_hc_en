@@ -18,4 +18,9 @@
 // Components
 
 // Common
-// @import './components/common/logo';
+@import './components/common/grid';
+@import './components/common/logo';
+
+// Layout
+@import './components/layout/header';
+@import './components/layout/navigation';

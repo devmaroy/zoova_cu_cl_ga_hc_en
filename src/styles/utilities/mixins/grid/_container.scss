@@ -1,0 +1,9 @@
+/*------------------------------------*\
+  # 8PT GRid Container
+\*------------------------------------*/
+
+@mixin grid-container {
+  max-width: calc(140.8rem + 3.2rem);
+  margin: 0 auto;
+  padding: 0 1.6rem;
+}

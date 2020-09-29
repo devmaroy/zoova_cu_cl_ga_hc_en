@@ -1,0 +1,16 @@
+/*------------------------------------*\
+  # Logo
+\*------------------------------------*/
+
+.logo {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: $fw-bold;
+  color: $clr-dark;
+  line-height: 1;
+
+  &__highlight {
+    font-weight: $fw-bold;
+    color: $clr-primary;
+  }
+}
