@@ -13,12 +13,15 @@ const Hero = () => {
             <p>A grateful heart is a beginning of greatness.</p>
           </div>
 
-          <Link to="/" className="button button--outline">
-            View gallery
-          </Link>
-          <Link to="/" className="button button--outline">
-            View gallery
-          </Link>
+          <div className="hero__meta">
+            <Link to="/" className="button button--primary">
+              View gallery
+            </Link>
+
+            <Link to="/" className="button button--outline-primary">
+              Contact us
+            </Link>
+          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,30 @@
+/*------------------------------------*\
+  # Buttons
+\*------------------------------------*/
+
+.button {
+  @include button;
+}
+
+.button--primary {
+  color: $clr-light;
+  background: $clr-primary;
+
+  &:hover,
+  &:focus {
+    background: $clr-light;
+    color: $clr-dark;
+    border-color: $clr-light;
+  }
+}
+
+.button--outline-primary {
+  color: $clr-light;
+  border-color: $clr-light;
+
+  &:hover,
+  &:focus {
+    color: $clr-primary;
+    border-color: $clr-primary;
+  }
+}
