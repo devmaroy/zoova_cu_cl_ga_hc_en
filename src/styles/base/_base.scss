@@ -4,6 +4,34 @@
 
 @include base-styles;
 
+.divider-space-section {
+  padding: 8rem 0;
+}
+
+// .divider-space {
+//   margin-top: 12rem;
+
+//   @media (min-width: 1024px) {
+//     margin-top: 20rem;
+//   }
+// }
+
+// .divider-space-small {
+//   margin-top: 6rem;
+
+//   @media (min-width: 1024px) {
+//     margin-top: 10rem;
+//   }
+// }
+
+// .divider-space-medium {
+//   margin-top: 8rem;
+
+//   @media (min-width: 1024px) {
+//     margin-top: 20rem;
+//   }
+// }
+
 // ::selection {
 //   background: $backgroundColor;
 //   color: $baseColor;
