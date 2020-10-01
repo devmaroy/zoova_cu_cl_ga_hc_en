@@ -6,3 +6,20 @@
   background: $clr-primary;
   color: $clr-light;
 }
+
+.events__gallery {
+  margin-top: 5.6rem;
+
+  .gallery__item:not(:last-child) {
+    margin-bottom: 3.2rem;
+  }
+}
+
+// .gallery {
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+// }
+
+// .gallery__item {
+//   height: 48rem;
+// }

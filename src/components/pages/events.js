@@ -13,7 +13,7 @@ const Events = () => {
       <div className="container">
         <div className="events__inner">
           <h2 className="events__heading section__heading">
-            Events of the latest events
+            Gallery of the latest events
           </h2>
 
           <div className="events__text section__text">
@@ -27,16 +27,42 @@ const Events = () => {
             </p>
           </div>
 
-          <Gallery
-            images={[
-              eventImg1,
-              eventImg2,
-              eventImg3,
-              eventImg4,
-              eventImg5,
-              eventImg6,
-            ]}
-          />
+          <div className="events__gallery">
+            <Gallery
+              items={[
+                {
+                  image: eventImg1,
+                  heading: 'Marathon',
+                  headingHighlight: 'Zoova',
+                },
+                {
+                  image: eventImg2,
+                  heading: 'Concert',
+                  headingHighlight: 'Public',
+                },
+                {
+                  image: eventImg3,
+                  heading: 'Gym Class',
+                  headingHighlight: 'Open',
+                },
+                {
+                  image: eventImg4,
+                  heading: 'Lunch',
+                  headingHighlight: 'Free',
+                },
+                {
+                  image: eventImg5,
+                  heading: 'Dance Class',
+                  headingHighlight: 'Sponsored',
+                },
+                {
+                  image: eventImg6,
+                  heading: 'Together',
+                  headingHighlight: 'Travel',
+                },
+              ]}
+            />
+          </div>
         </div>
       </div>
     </section>

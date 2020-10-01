@@ -1,0 +1,36 @@
+/*------------------------------------*\
+  # Gallery
+\*------------------------------------*/
+
+img {
+  object-fit: cover;
+}
+
+.gallery__item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  line-height: 1;
+  background: $clr-light;
+}
+
+.gallery__image {
+  height: 32rem;
+
+  @media (min-width: 1024px) {
+    height: 48rem;
+  }
+}
+
+.gallery__heading {
+  margin: 0;
+  padding: 1.6rem;
+  text-transform: uppercase;
+  font-weight: $fw-light;
+  color: $clr-dark;
+
+  &--highlight {
+    font-weight: $fw-bold;
+    color: $clr-primary;
+  }
+}

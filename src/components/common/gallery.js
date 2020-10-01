@@ -1,14 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Gallery = ({ images }) => {
+const Gallery = ({ items }) => {
   return (
     <div className="gallery">
-      {images.map((image) => (
-        <div className="gallery__item" key={image}>
-          <img src={image} alt="" className="gallery__image" />
+      {items.map(({ image, heading, headingHighlight }) => (
+        <div className="gallery__item">
+          <div className="gallery__image-wrapper">
+            <img src={image} className="gallery__image" alt="Gallery item" />
+          </div>
 
-          <h4 className="gallery__heading">Zoova Marathon</h4>
+          <h4 className="gallery__heading">
+            <span className="gallery__heading--highlight">
+              {headingHighlight}{' '}
+            </span>
+            {heading}
+          </h4>
         </div>
       ))}
     </div>
@@ -16,7 +23,13 @@ const Gallery = ({ images }) => {
 };
 
 Gallery.propTypes = {
-  images: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      image: PropTypes.string.isRequired,
+      heading: PropTypes.string,
+      headingHighlight: PropTypes.string,
+    }).isRequired,
+  ).isRequired,
 };
 
 export default Gallery;
