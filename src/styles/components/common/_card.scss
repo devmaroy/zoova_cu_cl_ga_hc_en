@@ -1,0 +1,81 @@
+/*------------------------------------*\
+  # Card
+\*------------------------------------*/
+
+.card {
+  background: $clr-light;
+  color: $clr-dark;
+}
+
+.card__inner {
+  padding: 2.4rem;
+}
+
+.card__icon {
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 2.4rem;
+  background: $clr-primary;
+
+  transition: all $transition;
+
+  img {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  &:hover,
+  &:focus {
+    background: darken($clr-primary, 15%);
+  }
+}
+
+.card__image {
+  background-size: cover;
+  height: 32rem;
+}
+
+.card__date {
+  margin-bottom: 2.4rem;
+  color: #a7b2bf;
+}
+
+.card__heading {
+  font-size: 2.8rem;
+  line-height: 3.9rem;
+  color: #3c3d3e;
+  margin: 0 0 1.6rem 0;
+
+  &--highlight {
+    color: $clr-primary;
+  }
+}
+
+.card__text {
+  font-size: $fs-md;
+  line-height: 2.8rem;
+  color: #6d8099;
+
+  p {
+    margin: 0;
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.card__meta {
+  margin-top: 4rem;
+}
+
+.card__button {
+  @include link-reset;
+  @include link($clr-primary, darken($clr-primary, 15%));
+  font-weight: $fw-bold;
+  text-transform: uppercase;
+}

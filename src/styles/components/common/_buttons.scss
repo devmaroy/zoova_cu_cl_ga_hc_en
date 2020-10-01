@@ -6,6 +6,10 @@
   @include button;
 }
 
+.button--sm {
+  @include button-sm;
+}
+
 .button--primary {
   color: $clr-light;
   background: $clr-primary;
@@ -27,4 +31,8 @@
     color: $clr-primary;
     border-color: $clr-primary;
   }
+}
+
+.button--link {
+  @include link($clr-light, $clr-primary);
 }

@@ -18,7 +18,7 @@ const Hero = () => {
               View gallery
             </Link>
 
-            <Link to="/" className="button button--outline-primary">
+            <Link to="/" className="button button--link">
               Contact us
             </Link>
           </div>

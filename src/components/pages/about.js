@@ -1,5 +1,10 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import Card from '../common/card';
+import cardImage from '../../images/pages/about/event-01.jpg';
+import cardIconUsers from '../../images/icons/users.svg';
+import cardIconEvent from '../../images/icons/event.svg';
+import cardIconHeart from '../../images/icons/heart.svg';
+import cardIconMoney from '../../images/icons/money.svg';
 
 const About = () => {
   return (
@@ -21,109 +26,62 @@ const About = () => {
           </div>
 
           <div className="about__overview">
-            <div className="card">
-              <div className="card__image" />
+            <Card
+              featured
+              image={cardImage}
+              date="May 15, 2018"
+              heading="A Cup Of Tea With People"
+            >
+              <p>
+                If you haven&apos;t got any charity in your heart, you have the
+                worst kind of heart trouble.
+              </p>
 
-              <div className="card__date">
-                <time>May 15, 2018</time>
-              </div>
+              <p>
+                Charity must become a fundamental state of mind and heart that
+                guides us in all we do.
+              </p>
+            </Card>
 
-              <h3 className="card__heading">A Cup Of Tea With People</h3>
+            <Card
+              icon={cardIconUsers}
+              heading="235.154"
+              headingHighlight="Participants"
+            >
+              <p>
+                See how our foundation grows. With a lot of wonderful and nice
+                people.
+              </p>
+            </Card>
 
-              <div className="card__text">
-                <p>
-                  If you haven&apos;t got any charity in your heart, you have
-                  the worst kind of heart trouble.
-                </p>
+            <Card icon={cardIconEvent} heading="1046" headingHighlight="Events">
+              <p>
+                See how our foundation grows. With a lot of wonderful and nice
+                people.
+              </p>
+            </Card>
 
-                <p>
-                  Charity must become a fundamental state of mind and heart that
-                  guides us in all we do.
-                </p>
-              </div>
+            <Card
+              icon={cardIconHeart}
+              heading="713"
+              headingHighlight="Sponsors"
+            >
+              <p>
+                See how our foundation grows. With a lot of wonderful and nice
+                people.
+              </p>
+            </Card>
 
-              <div className="card__meta">
-                <Link to="/" className="card__button">
-                  Learn more
-                </Link>
-              </div>
-            </div>
-
-            <div className="card">
-              <div className="card__icon" />
-
-              <h3 className="card__heading">235.154 Participants</h3>
-
-              <div className="card__text">
-                <p>
-                  See how our foundation grows. With a lot of wonderful and nice
-                  people.
-                </p>
-              </div>
-
-              <div className="card__meta">
-                <Link to="/" className="card__button">
-                  Learn more
-                </Link>
-              </div>
-            </div>
-
-            <div className="card">
-              <div className="card__icon" />
-
-              <h3 className="card__heading">1046 Events</h3>
-
-              <div className="card__text">
-                <p>
-                  See how our foundation grows. With a lot of wonderful and nice
-                  people.
-                </p>
-              </div>
-
-              <div className="card__meta">
-                <Link to="/" className="card__button">
-                  Learn more
-                </Link>
-              </div>
-            </div>
-
-            <div className="card">
-              <div className="card__icon" />
-
-              <h3 className="card__heading">713 Sponsors</h3>
-
-              <div className="card__text">
-                <p>
-                  See how our foundation grows. With a lot of wonderful and nice
-                  people.
-                </p>
-              </div>
-
-              <div className="card__meta">
-                <Link to="/" className="card__button">
-                  Learn more
-                </Link>
-              </div>
-            </div>
-
-            <div className="card">
-              <div className="card__icon" />
-
-              <h3 className="card__heading">$5.647.147 Donated</h3>
-
-              <div className="card__text">
-                <p>
-                  See how our foundation grows. With a lot of wonderful and nice
-                  people.
-                </p>
-              </div>
-
-              <div className="card__meta">
-                <Link to="/" className="card__button">
-                  Learn more
-                </Link>
-              </div>
-            </div>
+            <Card
+              icon={cardIconMoney}
+              heading="$5.647.147"
+              headingHighlight="Donated"
+            >
+              <p>
+                See how our foundation grows. With a lot of wonderful and nice
+                people.
+              </p>
+            </Card>
           </div>
         </div>
       </div>
