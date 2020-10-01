@@ -13,7 +13,7 @@ const About = () => {
         <div className="about__inner">
           <h2 className="about__heading">Help people along with us</h2>
 
-          <div className="about__text">
+          <div className="about__text section-text">
             <p>
               See how many people are already helping and how many sponsors
               dotated their money to people.

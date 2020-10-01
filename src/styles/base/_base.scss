@@ -8,6 +8,35 @@
   padding: 8rem 0;
 }
 
+.space {
+  padding-bottom: 40rem;
+}
+
+.overlay {
+  background: transparentize($clr-dark, 0.4);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.section-text {
+  color: $clr-base;
+
+  p {
+    margin: 0;
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 3.2rem;
+  }
+
+  strong {
+    color: $clr-light;
+  }
+}
+
 // .divider-space {
 //   margin-top: 12rem;
 
