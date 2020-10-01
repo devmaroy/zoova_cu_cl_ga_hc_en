@@ -2,10 +2,6 @@
   # Gallery
 \*------------------------------------*/
 
-img {
-  object-fit: cover;
-}
-
 .gallery__item {
   position: relative;
   overflow: hidden;
@@ -16,6 +12,8 @@ img {
 
 .gallery__image {
   height: 32rem;
+  object-fit: cover;
+  width: 100%;
 
   @media (min-width: 1024px) {
     height: 48rem;
