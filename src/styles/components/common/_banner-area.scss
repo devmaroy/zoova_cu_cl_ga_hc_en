@@ -1,15 +1,15 @@
 /*------------------------------------*\
-  # Message
+  # Banner Area
 \*------------------------------------*/
 
-.message {
+.banner-area {
   position: relative;
   background-size: cover;
   background-position: center center;
   height: 40rem;
 }
 
-.message__inner {
+.banner-area__inner {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,7 +17,7 @@
   color: $clr-light;
 }
 
-.message__heading {
+.banner-area__heading {
   font-family: $ff-heading;
   font-size: 3.6rem;
   line-height: 4.3rem;

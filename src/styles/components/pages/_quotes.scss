@@ -1,0 +1,19 @@
+/*------------------------------------*\
+  # Quotes
+\*------------------------------------*/
+
+.quotes {
+  position: relative;
+}
+
+.quotes__text {
+  margin: 0;
+  font-size: 2.4rem;
+  font-style: italic;
+  color: $clr-light;
+
+  footer {
+    font-size: 1.8rem;
+    color: $clr-base;
+  }
+}
