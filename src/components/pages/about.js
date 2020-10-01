@@ -8,12 +8,14 @@ import cardIconMoney from '../../images/icons/money.svg';
 
 const About = () => {
   return (
-    <section className="about divider-space-section">
+    <section className="section about divider-space-section">
       <div className="container">
         <div className="about__inner">
-          <h2 className="about__heading">Help people along with us</h2>
+          <h2 className="about__heading section__heading">
+            Help people along with us
+          </h2>
 
-          <div className="about__text section-text">
+          <div className="about__text section__text">
             <p>
               See how many people are already helping and how many sponsors
               dotated their money to people.

@@ -21,22 +21,6 @@
   right: 0;
 }
 
-.section-text {
-  color: $clr-base;
-
-  p {
-    margin: 0;
-  }
-
-  p:not(:last-child) {
-    margin-bottom: 3.2rem;
-  }
-
-  strong {
-    color: $clr-light;
-  }
-}
-
 // .divider-space {
 //   margin-top: 12rem;
 
