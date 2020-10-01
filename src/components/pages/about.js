@@ -45,8 +45,8 @@ const About = () => {
 
             <Card
               icon={cardIconUsers}
-              heading="235.154"
-              headingHighlight="Participants"
+              heading="Participants"
+              headingHighlight="235.154"
             >
               <p>
                 See how our foundation grows. With a lot of wonderful and nice
@@ -54,7 +54,7 @@ const About = () => {
               </p>
             </Card>
 
-            <Card icon={cardIconEvent} heading="1046" headingHighlight="Events">
+            <Card icon={cardIconEvent} heading="Events" headingHighlight="1046">
               <p>
                 See how our foundation grows. With a lot of wonderful and nice
                 people.
@@ -63,8 +63,8 @@ const About = () => {
 
             <Card
               icon={cardIconHeart}
-              heading="713"
-              headingHighlight="Sponsors"
+              heading="Sponsors"
+              headingHighlight="713"
             >
               <p>
                 See how our foundation grows. With a lot of wonderful and nice
@@ -74,8 +74,8 @@ const About = () => {
 
             <Card
               icon={cardIconMoney}
-              heading="$5.647.147"
-              headingHighlight="Donated"
+              heading="Donated"
+              headingHighlight="$5.647.147"
             >
               <p>
                 See how our foundation grows. With a lot of wonderful and nice
