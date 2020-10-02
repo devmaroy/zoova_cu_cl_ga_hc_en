@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// TODO: Change key to ID later.
+
 const Gallery = ({ items }) => {
   return (
     <div className="gallery">
       {items.map(({ image, heading, headingHighlight }) => (
-        <div className="gallery__item">
+        <div key={image} className="gallery__item">
           <div className="gallery__image-wrapper">
             <img src={image} className="gallery__image" alt="Gallery item" />
           </div>
