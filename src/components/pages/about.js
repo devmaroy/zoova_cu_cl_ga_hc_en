@@ -27,7 +27,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="about__overview">
+          <div className="about__overview section__spacing">
             <Card
               featured
               image={cardImage}

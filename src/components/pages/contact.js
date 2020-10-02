@@ -20,7 +20,7 @@ const Contact = () => {
             </p>
           </div>
 
-          <div className="contact__form">
+          <div className="contact__form section__spacing">
             <form className="form">
               <div className="form__group">
                 <label htmlFor="name" className="form__label">

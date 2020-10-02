@@ -27,7 +27,7 @@ const Events = () => {
             </p>
           </div>
 
-          <div className="events__gallery">
+          <div className="events__gallery section__spacing">
             <Gallery
               items={[
                 {

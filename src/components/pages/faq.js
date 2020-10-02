@@ -15,7 +15,7 @@ const FAQ = () => {
             </p>
           </div>
 
-          <div className="faq__items">
+          <div className="faq__items section__spacing">
             <Accordion
               items={[
                 {
