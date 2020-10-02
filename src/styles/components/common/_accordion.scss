@@ -1,0 +1,62 @@
+/*------------------------------------*\
+  # Accordion
+\*------------------------------------*/
+
+.accordion {
+  @include list-unstyled;
+}
+
+.accordion__heading,
+.accordion__text {
+  margin: 0;
+  padding: 0;
+}
+
+.accordion__heading {
+  font-weight: $fw-semi-bold;
+  padding: 1.6rem 2.4rem;
+  background: $clr-base;
+  color: $clr-primary;
+  cursor: pointer;
+
+  transition: all $transition, margin-bottom 0ms;
+
+  &:not(:last-child) {
+    margin-bottom: 2.4rem;
+  }
+
+  &:hover,
+  &:focus {
+    color: $clr-light;
+    background: $clr-primary;
+  }
+
+  &.active {
+    margin: 0;
+  }
+}
+
+.accordion__text {
+  display: none;
+  padding: 1.6rem 2.4rem;
+  background: lighten($clr-base, 3%);
+  border: 0.1rem solid $clr-base;
+  border-top: 0;
+  color: $clr-gray;
+
+  &:not(:last-child) {
+    margin-bottom: 2.4rem;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 3.2rem;
+  }
+
+  &.active {
+    display: block;
+  }
+}
