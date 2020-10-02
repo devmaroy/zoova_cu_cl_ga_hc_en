@@ -6,6 +6,7 @@ import Message from '../components/pages/message';
 import Events from '../components/pages/events';
 import Quotes from '../components/pages/quotes';
 import FAQ from '../components/pages/faq';
+import Contact from '../components/pages/contact';
 
 const IndexPage = () => {
   return (
@@ -16,6 +17,7 @@ const IndexPage = () => {
       <Events />
       <Quotes />
       <FAQ />
+      <Contact />
       <div className="space" />
     </Layout>
   );
