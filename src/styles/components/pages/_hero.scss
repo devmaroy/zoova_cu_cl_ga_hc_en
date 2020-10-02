@@ -2,21 +2,6 @@
   # Hero
 \*------------------------------------*/
 
-.hero {
-  position: relative;
-  margin-top: 3.2rem;
-  height: 48rem;
-  background-size: cover;
-}
-
-.hero__inner {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  color: $clr-light;
-}
-
 .hero__heading {
   font-family: $ff-heading;
   font-size: 4.6rem;
