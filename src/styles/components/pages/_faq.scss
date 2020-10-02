@@ -3,10 +3,14 @@
 \*------------------------------------*/
 
 .faq {
-  background: #ebeef2;
+  background: $clr-off-light;
   color: $clr-dark;
 }
 
 .faq__text {
   color: $clr-gray;
+}
+
+.faq__items {
+  margin-top: 5.6rem;
 }
