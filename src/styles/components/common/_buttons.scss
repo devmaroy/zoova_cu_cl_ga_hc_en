@@ -28,7 +28,8 @@
 
   &:hover,
   &:focus {
-    color: $clr-primary;
+    color: $clr-light;
+    background: $clr-primary;
     border-color: $clr-primary;
   }
 }
