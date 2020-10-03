@@ -11,4 +11,12 @@
   .card:not(:last-of-type) {
     margin-bottom: 3.2rem;
   }
+
+  // display: grid;
+  // grid-template-columns: 1fr repeat(2, 1fr);
+  // grid-gap: 20px;
+  // .card:first-child {
+  //   grid-column: span 1;
+  //   grid-row: span 2;
+  // }
 }

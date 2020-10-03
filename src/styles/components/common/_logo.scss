@@ -2,15 +2,23 @@
   # Logo
 \*------------------------------------*/
 
-.logo {
-  text-transform: uppercase;
+.logo__link {
+  @include link-reset;
+
   font-size: 2rem;
   font-weight: $fw-bold;
-  color: $clr-dark;
+  text-transform: uppercase;
   line-height: 1;
+  color: $clr-dark;
 
-  &__highlight {
-    font-weight: $fw-bold;
-    color: $clr-primary;
+  transition: all $transition;
+
+  &:hover,
+  &:focus {
+    opacity: 0.75;
   }
+}
+
+.logo__highlight {
+  color: $clr-primary;
 }
