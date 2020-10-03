@@ -21,40 +21,42 @@ const Contact = () => {
 
         <div className="contact__form section__spacing">
           <form className="form">
-            <div className="form__group">
-              <label htmlFor="name" className="form__label">
-                Name
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  className="form__control"
-                />
-              </label>
-            </div>
+            <div className="form__layout">
+              <div className="form__group">
+                <label htmlFor="name" className="form__label">
+                  Name
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    className="form__control"
+                  />
+                </label>
+              </div>
 
-            <div className="form__group">
-              <label htmlFor="email" className="form__label">
-                Email
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  className="form__control"
-                />
-              </label>
-            </div>
+              <div className="form__group">
+                <label htmlFor="email" className="form__label">
+                  Email
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    className="form__control"
+                  />
+                </label>
+              </div>
 
-            <div className="form__group">
-              <label htmlFor="phone" className="form__label">
-                Phone
-                <input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  className="form__control"
-                />
-              </label>
+              <div className="form__group">
+                <label htmlFor="phone" className="form__label">
+                  Phone
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    className="form__control"
+                  />
+                </label>
+              </div>
             </div>
 
             <div className="form__group">
