@@ -7,7 +7,7 @@ module.exports = {
     author: `Devmaroy`,
     twitterHandle: `@devmaroy`,
     email: `hello@devmaroy.com`,
-    siteUrl: `https://marekmatejovic.com/`,
+    siteUrl: `https://zoova.marekmatejovic.com/`,
     image: `${__dirname}/src/images/social/twitter-share.png`,
     socialMedia: {
       facebook: `https://www.facebook.com/zoova.foundation`,
@@ -17,7 +17,7 @@ module.exports = {
       linkedin: `https://www.linkedin.com/in/zoova.foundation`,
     },
     copyright: {
-      name: 'Zoova.com',
+      name: 'Zoova',
       rights: 'All rights reserved',
       author: 'devmaroy',
     },
