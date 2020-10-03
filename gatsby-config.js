@@ -44,5 +44,30 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Zoova Foundation: Official website of the Zoova Foundation`,
+        short_name: `Zoova Foundation`,
+        start_url: `/`,
+        background_color: `#418ef4`,
+        theme_color: `#418ef4`,
+        // Enables "Add to Homescreen" prompt and disables browser UI (including back button)
+        // see https://developers.google.com/web/fundamentals/web-app-manifest/#display
+        display: `standalone`,
+        icon: `${__dirname}/src/images/favicons/favicon.png`, // This path is relative to the root of the site.
+        // An optional attribute which provides support for CORS check.
+        // If you do not provide a crossOrigin option, it will skip CORS for manifest.
+        // Any invalid keyword or empty string defaults to `anonymous`
+        crossOrigin: `use-credentials`,
+        icon_options: {
+          // For all the options available, please see:
+          // https://developer.mozilla.org/en-US/docs/Web/Manifest
+          // https://w3c.github.io/manifest/#purpose-member
+          purpose: `maskable`,
+        },
+        legacy: true,
+      },
+    },
   ],
 };
