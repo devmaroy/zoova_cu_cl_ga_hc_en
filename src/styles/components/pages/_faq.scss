@@ -10,3 +10,11 @@
 .faq__text {
   color: $clr-gray;
 }
+
+.faq__items {
+  @media (min-width: 720px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2.4rem;
+  }
+}

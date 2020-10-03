@@ -106,7 +106,7 @@ const FAQ = () => {
                 },
                 {
                   id: '3561ff80-9315-46d5-a9dd-886d43f1c192',
-                  heading: 'Is it possible to organize an event abroad?',
+                  heading: 'Is it fine to organize an event abroad?',
                   text: (
                     <p>
                       Unfortunately, no. Events are organized only in our
