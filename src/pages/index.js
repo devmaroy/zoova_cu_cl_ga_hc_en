@@ -18,7 +18,6 @@ const IndexPage = () => {
       <Quotes />
       <FAQ />
       <Contact />
-      <div className="space" />
     </Layout>
   );
 };

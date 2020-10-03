@@ -1,3 +1,20 @@
 /*------------------------------------*\
   # Footer
 \*------------------------------------*/
+
+.footer {
+  padding: 3.2rem 0;
+  font-size: $fs-md;
+  color: $clr-gray;
+}
+
+.footer__highlight {
+  font-weight: $fw-bold;
+  color: $clr-danger;
+}
+
+.footer__link {
+  @include link-reset;
+  @include link($clr-primary, darken($clr-primary, 15%));
+  font-weight: $fw-bold;
+}
