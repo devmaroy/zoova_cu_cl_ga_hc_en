@@ -10,13 +10,28 @@
 .about__overview {
   .card:not(:last-of-type) {
     margin-bottom: 3.2rem;
+
+    @media (min-width: 720px) {
+      margin: 0;
+    }
   }
 
-  // display: grid;
-  // grid-template-columns: 1fr repeat(2, 1fr);
-  // grid-gap: 20px;
-  // .card:first-child {
-  //   grid-column: span 1;
-  //   grid-row: span 2;
+  @media (min-width: 720px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    /* Large resolutions 
+    grid-template-columns: 2fr 1.5fr 1.5fr;
+    */
+    grid-gap: 2.4rem;
+  }
+
+  .card:first-child {
+    // grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  // .card:not(:first-child) {
+  //   grid-column: span 2;
   // }
 }

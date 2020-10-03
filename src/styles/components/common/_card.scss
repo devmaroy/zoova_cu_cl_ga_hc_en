@@ -3,6 +3,7 @@
 \*------------------------------------*/
 
 .card {
+  position: relative;
   background: $clr-light;
   color: $clr-dark;
 }
@@ -59,6 +60,7 @@
   font-size: $fs-md;
   line-height: 2.8rem;
   color: #6d8099;
+  margin-bottom: 4.8rem;
 
   p {
     margin: 0;
@@ -70,7 +72,8 @@
 }
 
 .card__meta {
-  margin-top: 4rem;
+  position: absolute;
+  bottom: 2.4rem;
 }
 
 .card__button {
