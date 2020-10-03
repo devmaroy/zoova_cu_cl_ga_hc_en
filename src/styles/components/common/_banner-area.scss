@@ -13,6 +13,10 @@
     background-position: top left;
   }
 
+  &--large {
+    min-height: 56rem;
+  }
+
   &::after {
     content: '';
     background: transparentize($clr-dark, 0.4);

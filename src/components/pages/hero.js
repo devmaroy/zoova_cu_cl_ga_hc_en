@@ -5,7 +5,7 @@ import heroBg from '../../images/pages/hero/hero-bg-2.jpg';
 const Hero = () => {
   return (
     <div
-      className="banner-area banner-area--top hero"
+      className="banner-area banner-area--top banner-area--large hero"
       style={{ backgroundImage: `url( ${heroBg} )` }}
     >
       <div className="banner-area__inner hero__inner container">
