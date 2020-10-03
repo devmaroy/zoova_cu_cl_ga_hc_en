@@ -3,9 +3,13 @@
 \*------------------------------------*/
 
 .footer {
-  padding: 3.2rem 0;
+  padding: 4rem 0;
   font-size: $fs-md;
   color: $clr-gray;
+}
+
+.footer__social {
+  margin-top: 3.2rem;
 }
 
 .footer__highlight {

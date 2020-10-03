@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
+import Social from '../common/social';
 
 const Footer = () => {
   return (
@@ -15,6 +16,7 @@ const Footer = () => {
               . All rights reserved.
             </p>
           </div>
+
           <div className="footer__author">
             <p>
               Made with <span className="footer__highlight">love</span> by{' '}
@@ -22,6 +24,10 @@ const Footer = () => {
                 devmaroy
               </a>
             </p>
+          </div>
+
+          <div className="footer__social">
+            <Social />
           </div>
         </div>
       </div>
