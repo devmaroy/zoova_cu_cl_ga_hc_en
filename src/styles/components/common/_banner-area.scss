@@ -15,6 +15,10 @@
 
   &--large {
     min-height: 56rem;
+
+    @media (min-width: 920px) {
+      min-height: 72rem;
+    }
   }
 
   &::after {
