@@ -6,3 +6,10 @@
   position: relative;
   margin: 3.2rem 0;
 }
+
+.header__inner {
+  @media (min-width: 920px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
