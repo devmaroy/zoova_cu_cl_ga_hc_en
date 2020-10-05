@@ -42,8 +42,6 @@
 }
 
 .navigation {
-  margin-top: 1.6rem;
-  border-top: 0.1rem solid $clr-lightgray;
   display: none;
   opacity: 0;
 
@@ -53,11 +51,21 @@
     display: block;
     opacity: 1;
   }
+
+  position: absolute;
+  right: 0;
+  z-index: 99;
+  width: 100%;
+  padding: 1.6rem;
+  padding-top: 0;
+  background: $clr-light;
 }
 
 .navigation__list {
   @include list-unstyled;
   margin-top: 2.4rem;
+  padding-top: 1.6rem;
+  border-top: 0.1rem solid $clr-lightgray;
 }
 
 .navigation__item {
