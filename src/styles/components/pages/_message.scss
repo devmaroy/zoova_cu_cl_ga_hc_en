@@ -2,8 +2,14 @@
   # Message
 \*------------------------------------*/
 
-.message__inner {
-  @media (min-width: 920px) {
-    text-align: center;
+.message {
+  .message__inner {
+    @media (min-width: 1100px) {
+      text-align: center;
+    }
+  }
+
+  .container {
+    @include grid-container($maxWidth: 1100px);
   }
 }

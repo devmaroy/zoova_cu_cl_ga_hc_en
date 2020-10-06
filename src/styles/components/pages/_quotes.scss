@@ -5,6 +5,10 @@
 .quotes {
   position: relative;
   text-align: center;
+
+  .container {
+    @include grid-container($maxWidth: 1100px);
+  }
 }
 
 .quotes__text {

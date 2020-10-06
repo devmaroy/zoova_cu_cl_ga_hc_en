@@ -10,9 +10,7 @@
   }
 
   .container {
-    @media (min-width: 920px) {
-      @include grid-container($maxWidth: 960px);
-    }
+    @include grid-container($maxWidth: 960px);
   }
 
   .contact__form {
