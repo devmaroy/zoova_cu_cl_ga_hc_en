@@ -8,6 +8,10 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 2.4rem;
   }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 .gallery__item {
