@@ -2,10 +2,22 @@
   # Contact
 \*------------------------------------*/
 
-// .contact {
-//   .container {
-//     @media (min-width: 920px) {
-//       max-width: ;
-//     }
-//   }
-// }
+.contact {
+  .contact__inner {
+    @media (min-width: 1200px) {
+      text-align: center;
+    }
+  }
+
+  .container {
+    @media (min-width: 920px) {
+      @include grid-container($maxWidth: 960px);
+    }
+  }
+
+  .contact__form {
+    @media (min-width: 920px) {
+      text-align: left;
+    }
+  }
+}
