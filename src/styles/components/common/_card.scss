@@ -7,10 +7,17 @@
   background: $clr-light;
   color: $clr-dark;
 
+  transition: all $transition;
+
   @media (min-width: 920px) {
     .card__inner {
       padding: 4rem;
     }
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.03);
   }
 }
 
