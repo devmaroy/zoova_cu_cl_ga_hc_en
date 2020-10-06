@@ -6,10 +6,10 @@
 
 .divider-space-section {
   padding: 8rem 0;
-}
 
-.space {
-  padding-bottom: 40rem;
+  @media (min-width: 920px) {
+    padding: 12rem 0;
+  }
 }
 
 // .divider-space {

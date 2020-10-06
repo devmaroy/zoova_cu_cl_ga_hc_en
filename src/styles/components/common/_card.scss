@@ -6,6 +6,12 @@
   position: relative;
   background: $clr-light;
   color: $clr-dark;
+
+  @media (min-width: 920px) {
+    .card__inner {
+      padding: 4rem;
+    }
+  }
 }
 
 .card__inner {
@@ -38,6 +44,10 @@
 .card__image {
   background-size: cover;
   height: 32rem;
+
+  @media (min-width: 920px) {
+    height: 40rem;
+  }
 }
 
 .card__date {
