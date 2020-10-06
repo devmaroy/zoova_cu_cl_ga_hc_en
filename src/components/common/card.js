@@ -15,38 +15,40 @@ const Card = ({
 }) => {
   return (
     <div className={classNames('card', { 'card--featured': featured })}>
-      {image && (
-        <div
-          className="card__image"
-          style={{ backgroundImage: `url(${image})` }}
-        />
-      )}
-
-      <div className="card__inner">
-        {icon && (
-          <div className="card__icon-wrapper">
-            <div className="card__icon">
-              <img src={icon} alt="Card icon" />
-            </div>
-          </div>
+      <div className="card__wrapper">
+        {image && (
+          <div
+            className="card__image"
+            style={{ backgroundImage: `url(${image})` }}
+          />
         )}
 
-        <h3 className="card__heading">
-          {headingHighlight && (
-            <span className="card__heading--highlight">
-              {headingHighlight}{' '}
-            </span>
+        <div className="card__inner">
+          {icon && (
+            <div className="card__icon-wrapper">
+              <div className="card__icon">
+                <img src={icon} alt="Card icon" />
+              </div>
+            </div>
           )}
 
-          {heading}
-        </h3>
+          <h3 className="card__heading">
+            {headingHighlight && (
+              <span className="card__heading--highlight">
+                {headingHighlight}{' '}
+              </span>
+            )}
 
-        <div className="card__text">{children}</div>
+            {heading}
+          </h3>
 
-        <div className="card__meta">
-          <Link to="/" className="card__button">
-            {buttonText}
-          </Link>
+          <div className="card__text">{children}</div>
+
+          <div className="card__meta">
+            <Link to="/" className="card__button">
+              {buttonText}
+            </Link>
+          </div>
         </div>
       </div>
     </div>
