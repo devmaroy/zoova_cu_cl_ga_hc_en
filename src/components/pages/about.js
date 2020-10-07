@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { Reveal, Tween } from 'react-gsap';
+import SectionHeader from '../common/sectionHeader';
 import Card from '../common/card';
 import cardImage from '../../images/pages/about/event-01.jpg';
 import cardIconUsers from '../../images/icons/users.svg';
@@ -8,35 +9,29 @@ import cardIconHeart from '../../images/icons/heart.svg';
 import cardIconMoney from '../../images/icons/money.svg';
 
 const About = () => {
-  const triggerAnimationRef = useRef();
   const triggerAnimationCardsRef = useRef();
 
   return (
     <section className="section about divider-space-section">
       <div className="container">
-        <div className="about__inner" ref={triggerAnimationRef}>
-          <Reveal trigger={triggerAnimationRef.current}>
-            <Tween from={{ y: '-50', opacity: 0 }} ease="power1.out">
-              <h2 className="about__heading section__heading">
-                Help people along with us
-              </h2>
+        <div className="about__inner">
+          <SectionHeader heading="Help people along with us">
+            <p>
+              See how many people are already helping and how many sponsors
+              dotated their money to people.
+            </p>
 
-              <div className="about__text section__text">
-                <p>
-                  See how many people are already helping and how many sponsors
-                  dotated their money to people.
-                </p>
+            <p>
+              We also organize a lot of events. The current event is{' '}
+              <strong>A Cup Of Tea With People</strong>
+            </p>
+          </SectionHeader>
 
-                <p>
-                  We also organize a lot of events. The current event is{' '}
-                  <strong>A Cup Of Tea With People</strong>
-                </p>
-              </div>
-            </Tween>
-          </Reveal>
-
-          <Reveal trigger={triggerAnimationCardsRef.current}>
-            <div className="about__overview section__spacing">
+          <div
+            className="about__overview section__spacing"
+            ref={triggerAnimationCardsRef}
+          >
+            <Reveal trigger={triggerAnimationCardsRef.current}>
               <Tween from={{ opacity: 0 }} ease="power1.out" stagger={0.2}>
                 <div className="about__item">
                   <Card
@@ -109,8 +104,8 @@ const About = () => {
                   </Card>
                 </div>
               </Tween>
-            </div>
-          </Reveal>
+            </Reveal>
+          </div>
         </div>
       </div>
     </section>
