@@ -1,4 +1,5 @@
 import React from 'react';
+import SectionHeader from '../common/sectionHeader';
 import Gallery from '../common/gallery';
 import eventImg1 from '../../images/pages/events/event-01.jpg';
 import eventImg2 from '../../images/pages/events/event-02.jpg';
@@ -12,11 +13,11 @@ const Events = () => {
     <section className="section events divider-space-section">
       <div className="container">
         <div className="events__inner">
-          <h2 className="events__heading section__heading">
-            Gallery of the latest events
-          </h2>
-
-          <div className="events__text section__text">
+          <SectionHeader
+            heading="Gallery of the latest events"
+            headingClass="events__heading"
+            textClass="events__text"
+          >
             <p>
               Check out our latest events. We hold concerts, marathons,
               performances, lunches, dinners and other events. You too can be
@@ -25,7 +26,7 @@ const Events = () => {
                 😉
               </span>
             </p>
-          </div>
+          </SectionHeader>
 
           <div className="events__gallery section__spacing">
             <Gallery

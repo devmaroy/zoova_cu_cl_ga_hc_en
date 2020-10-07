@@ -14,7 +14,11 @@ const Message = () => {
         className="banner-area__inner message__inner container"
         ref={triggerAnimationRef}
       >
-        <SectionHeader heading="A heart without dreams is like a bird without feathers">
+        <SectionHeader
+          heading="A heart without dreams is like a bird without feathers"
+          headingClass="message__heading"
+          textClass="message__text"
+        >
           <p>
             A grateful heart is a beginning of greatness. It is an expression of
             humility.

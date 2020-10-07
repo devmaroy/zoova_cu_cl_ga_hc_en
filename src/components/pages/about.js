@@ -15,7 +15,11 @@ const About = () => {
     <section className="section about divider-space-section">
       <div className="container">
         <div className="about__inner">
-          <SectionHeader heading="Help people along with us">
+          <SectionHeader
+            heading="Help people along with us"
+            headingClass="about__heading"
+            textClass="about__text"
+          >
             <p>
               See how many people are already helping and how many sponsors
               dotated their money to people.
