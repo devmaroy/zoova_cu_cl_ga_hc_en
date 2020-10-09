@@ -1,17 +1,30 @@
 import React, { useRef } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Reveal, Tween } from 'react-gsap';
 import SocialIcon from './socialIcon';
 
-const socialLinks = {
-  facebook: 'https://facebook.com/',
-  twitter: 'https://twitter.com/',
-  instagram: 'https://instagram.com/',
-  linkedin: 'https://linkedin.com/in/',
-};
+// Query
+const query = graphql`
+  query Social {
+    site {
+      siteMetadata {
+        socialMedia {
+          facebook
+          twitter
+          instagram
+          dribbble
+          linkedin
+        }
+      }
+    }
+  }
+`;
 
 const Social = ({ fixedWidth = false }) => {
   const triggerAnimationRef = useRef();
+  const data = useStaticQuery(query);
+  const socialLinks = data.site.siteMetadata.socialMedia;
 
   return (
     <ul className="social">
