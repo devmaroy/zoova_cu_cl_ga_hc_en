@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react';
+import React, { useRef } from 'react';
 import Slider from 'react-slick';
+import { Reveal, Tween } from 'react-gsap';
 import quotesBg from '../../images/pages/quotes/quotes-bg.jpg';
 
 const quotes = [
@@ -19,8 +20,6 @@ const quotes = [
 ];
 
 const Quotes = () => {
-  console.log(quotes);
-
   const settings = {
     dots: false,
     arrows: false,
@@ -32,24 +31,35 @@ const Quotes = () => {
     pauseOnHover: true,
   };
 
+  const triggerAnimationRef = useRef();
+
   return (
     <section
       className="section banner-area quotes"
       style={{ backgroundImage: `url( ${quotesBg} )` }}
     >
-      <div className="banner-area__inner quotes__inner container">
-        <Slider {...settings}>
-          {quotes.map(({ text, author }) => (
-            <blockquote
-              key={text}
-              className="banner-area__text quotes__text section__text"
-            >
-              {text}
+      <div
+        className="banner-area__inner quotes__inner container"
+        ref={triggerAnimationRef}
+      >
+        <Reveal trigger={triggerAnimationRef.current}>
+          <Tween from={{ opacity: 0 }} ease="power1.out">
+            <div className="quotes__slider">
+              <Slider {...settings}>
+                {quotes.map(({ text, author }) => (
+                  <blockquote
+                    key={text}
+                    className="banner-area__text quotes__text section__text"
+                  >
+                    {text}
 
-              <footer>— {author}</footer>
-            </blockquote>
-          ))}
-        </Slider>
+                    <footer>— {author}</footer>
+                  </blockquote>
+                ))}
+              </Slider>
+            </div>
+          </Tween>
+        </Reveal>
       </div>
     </section>
   );
