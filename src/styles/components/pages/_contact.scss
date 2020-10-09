@@ -3,19 +3,23 @@
 \*------------------------------------*/
 
 .contact {
-  .contact__inner {
-    @media (min-width: 1200px) {
-      text-align: center;
-    }
-  }
-
   .container {
     @include grid-container($maxWidth: 960px);
   }
+}
 
-  .contact__form {
-    @media (min-width: 920px) {
-      text-align: left;
-    }
+.contact__inner {
+  @media (min-width: 1200px) {
+    text-align: center;
+  }
+}
+
+.contact__form {
+  @media (min-width: 920px) {
+    text-align: left;
+  }
+
+  .form {
+    visibility: hidden;
   }
 }

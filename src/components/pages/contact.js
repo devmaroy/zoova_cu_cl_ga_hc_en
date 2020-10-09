@@ -29,7 +29,11 @@ const Contact = () => {
           ref={triggerAnimationRef}
         >
           <Reveal trigger={triggerAnimationRef.current}>
-            <Tween from={{ opacity: 0 }} ease="power1.out" stagger={0.2}>
+            <Tween
+              from={{ autoAlpha: 0, opacity: 0 }}
+              ease="power1.out"
+              stagger={0.2}
+            >
               <form className="form">
                 <div className="form__layout">
                   <div className="form__group">

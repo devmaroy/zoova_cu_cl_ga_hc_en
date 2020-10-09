@@ -9,6 +9,8 @@
 }
 
 .footer__info {
+  visibility: hidden;
+
   @media (min-width: 720px) {
     display: flex;
     justify-content: space-between;

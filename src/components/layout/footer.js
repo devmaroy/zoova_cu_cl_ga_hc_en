@@ -30,7 +30,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer__inner">
           <Reveal trigger={triggerAnimationRef.current}>
-            <Tween from={{ opacity: 0 }} ease="power1.out">
+            <Tween from={{ autoAlpha: 0, opacity: 0 }} ease="power1.out">
               <div className="footer__info">
                 <div className="footer__copyright">
                   <p>

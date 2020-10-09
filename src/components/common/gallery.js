@@ -8,7 +8,11 @@ const Gallery = ({ items }) => {
   return (
     <div className="gallery" ref={triggerAnimationRef}>
       <Reveal trigger={triggerAnimationRef.current}>
-        <Tween from={{ y: -50, opacity: 0 }} ease="power1.out" stagger={0.2}>
+        <Tween
+          from={{ autoAlpha: 0, y: -50, opacity: 0 }}
+          ease="power1.out"
+          stagger={0.2}
+        >
           {items.map(({ image, heading, headingHighlight }) => (
             <div key={image} className="gallery__item">
               <div className="gallery__image-wrapper">

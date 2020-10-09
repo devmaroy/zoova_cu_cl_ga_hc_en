@@ -2,6 +2,10 @@
   # Logo
 \*------------------------------------*/
 
+.logo {
+  visibility: hidden;
+}
+
 .logo__link {
   @include link-reset;
 

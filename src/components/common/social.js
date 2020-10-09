@@ -29,7 +29,11 @@ const Social = ({ fixedWidth = false }) => {
   return (
     <ul className="social">
       <Reveal trigger={triggerAnimationRef.current}>
-        <Tween from={{ y: -50, opacity: 0 }} ease="power1.out" stagger={0.2}>
+        <Tween
+          from={{ autoAlpha: 0, y: -50, opacity: 0 }}
+          ease="power1.out"
+          stagger={0.2}
+        >
           {Object.entries(socialLinks).map(([name, url]) => (
             <li key={name} className="social__item">
               <a href={url} target="__blank" className="social__link">

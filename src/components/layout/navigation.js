@@ -72,7 +72,7 @@ const Navigation = () => {
       <nav className={classNames('navigation', { 'is-open': isOpen })}>
         <ul className="navigation__list">
           <Tween
-            from={{ y: '-50', opacity: 0 }}
+            from={{ autoAlpha: 0, y: '-50', opacity: 0 }}
             ease="power1.out"
             stagger={0.2}
           >

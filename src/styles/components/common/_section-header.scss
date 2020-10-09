@@ -3,6 +3,7 @@
 \*------------------------------------*/
 
 .section-header__heading {
+  visibility: hidden;
   font-family: $ff-heading;
   font-size: 3.6rem;
   line-height: 4.3rem;
@@ -16,6 +17,7 @@
 }
 
 .section-header__text {
+  visibility: hidden;
   font-size: $fs-md;
   line-height: 2.5rem;
   margin-top: 1.6rem;

@@ -13,7 +13,11 @@ const SectionHeader = ({
   return (
     <div className="section-header" ref={triggerAnimationRef}>
       <Reveal trigger={triggerAnimationRef.current}>
-        <Tween from={{ y: -50, opacity: 0 }} ease="power1.out" stagger={0.2}>
+        <Tween
+          from={{ autoAlpha: 0, y: -50, opacity: 0 }}
+          ease="power1.out"
+          stagger={0.2}
+        >
           <h2 className={`section-header__heading ${headinClass}`}>
             {heading}
           </h2>

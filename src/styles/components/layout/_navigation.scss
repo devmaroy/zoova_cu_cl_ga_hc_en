@@ -90,6 +90,8 @@
 }
 
 .navigation__item {
+  visibility: hidden;
+
   &:not(:last-child) {
     margin-bottom: 1.6rem;
 

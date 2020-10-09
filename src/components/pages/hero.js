@@ -10,7 +10,11 @@ const Hero = () => {
       style={{ backgroundImage: `url( ${heroBg} )` }}
     >
       <div className="banner-area__inner hero__inner container">
-        <Tween from={{ y: '-50', opacity: 0 }} ease="power1.out" stagger={0.2}>
+        <Tween
+          from={{ autoAlpha: 0, y: '-50', opacity: 0 }}
+          ease="power1.out"
+          stagger={0.2}
+        >
           <h1 className="hero__heading">Zoova Foundation</h1>
 
           <div className="hero__text">
@@ -18,7 +22,11 @@ const Hero = () => {
           </div>
         </Tween>
 
-        <Tween from={{ opacity: 0 }} ease="power1.out" stagger={0.2}>
+        <Tween
+          from={{ autoAlpha: 0, opacity: 0 }}
+          ease="power1.out"
+          stagger={0.2}
+        >
           <div className="hero__meta">
             <Link to="/" className="button button--primary">
               View gallery

@@ -36,7 +36,11 @@ const About = () => {
             ref={triggerAnimationCardsRef}
           >
             <Reveal trigger={triggerAnimationCardsRef.current}>
-              <Tween from={{ opacity: 0 }} ease="power1.out" stagger={0.2}>
+              <Tween
+                from={{ autoAlpha: 0, opacity: 0 }}
+                ease="power1.out"
+                stagger={0.2}
+              >
                 <div className="about__item">
                   <Card
                     featured

@@ -27,11 +27,11 @@ const FAQ = () => {
           >
             <Reveal trigger={triggerAnimationRef.current}>
               <Tween
-                from={{ y: -50, opacity: 0 }}
+                from={{ autoAlpha: 0, y: -50, opacity: 0 }}
                 ease="power1.out"
                 stagger={0.2}
               >
-                <div>
+                <div className="faq__item">
                   <Accordion
                     items={[
                       {
@@ -71,7 +71,7 @@ const FAQ = () => {
                   />
                 </div>
 
-                <div>
+                <div className="faq__item">
                   <Accordion
                     items={[
                       {
@@ -113,7 +113,7 @@ const FAQ = () => {
                   />
                 </div>
 
-                <div>
+                <div className="faq__item">
                   <Accordion
                     items={[
                       {

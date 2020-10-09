@@ -43,7 +43,7 @@ const Quotes = () => {
         ref={triggerAnimationRef}
       >
         <Reveal trigger={triggerAnimationRef.current}>
-          <Tween from={{ opacity: 0 }} ease="power1.out">
+          <Tween from={{ autoAlpha: 0, opacity: 0 }} ease="power1.out">
             <div className="quotes__slider">
               <Slider {...settings}>
                 {quotes.map(({ text, author }) => (
