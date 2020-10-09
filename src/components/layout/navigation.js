@@ -1,7 +1,31 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import classNames from 'classnames';
 import { Tween } from 'react-gsap';
+
+// Query
+const query = graphql`
+  query Navigation {
+    navigation: allFile(
+      filter: {
+        internal: { mediaType: { eq: "text/markdown" } }
+        sourceInstanceName: { eq: "markdown" }
+        relativeDirectory: { regex: "/navigation/" }
+      }
+      sort: { fields: [childMarkdownRemark___frontmatter___order], order: ASC }
+    ) {
+      nodes {
+        childMarkdownRemark {
+          frontmatter {
+            id
+            name
+            url
+          }
+        }
+      }
+    }
+  }
+`;
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,6 +33,11 @@ const Navigation = () => {
   const toggleNavigation = () => {
     setIsOpen(!isOpen);
   };
+
+  const data = useStaticQuery(query);
+  const navigation = data.navigation.nodes;
+
+  console.log(navigation);
 
   return (
     <>
@@ -44,55 +73,20 @@ const Navigation = () => {
             ease="power1.out"
             stagger={0.2}
           >
-            <li className="navigation__item">
-              <Link
-                to="/"
-                className="navigation__link"
-                activeClassName="navigation__link--active"
-              >
-                Home
-              </Link>
-            </li>
-
-            <li className="navigation__item">
-              <Link
-                to="/about"
-                className="navigation__link"
-                activeClassName="navigation__link--active"
-              >
-                About
-              </Link>
-            </li>
-
-            <li className="navigation__item">
-              <Link
-                to="/gallery"
-                className="navigation__link"
-                activeClassName="navigation__link--active"
-              >
-                Gallery
-              </Link>
-            </li>
-
-            <li className="navigation__item">
-              <Link
-                to="/faq"
-                className="navigation__link"
-                activeClassName="navigation__link--active"
-              >
-                FAQ
-              </Link>
-            </li>
-
-            <li className="navigation__item">
-              <Link
-                to="/contact"
-                className="navigation__link"
-                activeClassName="navigation__link--active"
-              >
-                Contact
-              </Link>
-            </li>
+            {navigation.map(
+              ({ childMarkdownRemark: item }) =>
+                console.log(item) || (
+                  <li key={item.frontmatter.id} className="navigation__item">
+                    <Link
+                      to={item.frontmatter.url}
+                      className="navigation__link"
+                      activeClassName="navigation__link--active"
+                    >
+                      {item.frontmatter.name}
+                    </Link>
+                  </li>
+                ),
+            )}
           </Tween>
         </ul>
       </nav>
