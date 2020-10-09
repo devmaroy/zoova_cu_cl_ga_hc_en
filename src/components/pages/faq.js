@@ -9,7 +9,7 @@ const FAQ = () => {
   return (
     <section className="section faq divider-space-section">
       <div className="container">
-        <div className="faq__inner" ref={triggerAnimationRef}>
+        <div className="faq__inner">
           <SectionHeader
             heading="How can you help"
             headingClass="faq__heading"
@@ -21,7 +21,10 @@ const FAQ = () => {
             </p>
           </SectionHeader>
 
-          <div className="faq__items section__spacing">
+          <div
+            className="faq__items section__spacing"
+            ref={triggerAnimationRef}
+          >
             <Reveal trigger={triggerAnimationRef.current}>
               <Tween
                 from={{ y: -50, opacity: 0 }}
