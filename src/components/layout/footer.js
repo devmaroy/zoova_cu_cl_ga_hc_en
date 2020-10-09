@@ -1,10 +1,29 @@
 import React, { useRef } from 'react';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import { Reveal, Tween } from 'react-gsap';
-import { Link } from 'gatsby';
 import Social from '../common/social';
+
+// Query
+const query = graphql`
+  query Footer {
+    site {
+      siteMetadata {
+        author
+        copyright {
+          name
+          rights
+          author
+          authorUrl
+        }
+      }
+    }
+  }
+`;
 
 const Footer = () => {
   const triggerAnimationRef = useRef();
+  const data = useStaticQuery(query);
+  const { author, copyright } = data.site.siteMetadata;
 
   return (
     <footer className="footer">
@@ -17,20 +36,17 @@ const Footer = () => {
                   <p>
                     Copyright © {new Date().getFullYear()}{' '}
                     <Link to="/" className="footer__link">
-                      Zoova
+                      {copyright.name}
                     </Link>
-                    . All rights reserved.
+                    . {copyright.rights}
                   </p>
                 </div>
 
                 <div className="footer__author">
                   <p>
                     Made with <span className="footer__highlight">love</span> by{' '}
-                    <a
-                      href="https://marekmatejovic.com/"
-                      className="footer__link"
-                    >
-                      devmaroy
+                    <a href={copyright.authorUrl} className="footer__link">
+                      {author}
                     </a>
                   </p>
                 </div>

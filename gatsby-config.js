@@ -4,7 +4,7 @@ module.exports = {
     title: `Zoova Foundation: Official website of the Zoova Foundation`,
     titleSimplified: `Zoova Foundation`,
     description: `Official website of the Zoova Foundation.`,
-    author: `Devmaroy`,
+    author: `devmaroy`,
     twitterHandle: `@devmaroy`,
     email: `hello@devmaroy.com`,
     siteUrl: `https://zoova.marekmatejovic.com/`,
@@ -20,6 +20,7 @@ module.exports = {
       name: 'Zoova',
       rights: 'All rights reserved',
       author: 'devmaroy',
+      authorUrl: 'https://marekmatejovic.com/',
     },
   },
   plugins: [
