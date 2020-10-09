@@ -1,10 +1,10 @@
-<img src="src/images/logo/logobg.png" width="100">
+<img src="src/images/logo/logo.png" width="100">
 
 # **Zoova Foundation: Official website of the Zoova Foundation**
 
 This project is powered by **Gatsby** and is created for a client.
 
-Build with markdown.
+Build with hard coded data.
 
 <br>
 
@@ -19,7 +19,7 @@ Use these commands to install the dependencies and start the server.
 1. **Clone from Github**
 
    ```
-   $ git clone git@github.com:devmaroy/zoova_cu_cl_ga_md_en.git
+   $ git clone git@github.com:devmaroy/zoova_cu_cl_ga_hc_en.git
    ```
 
 2. **Install dependencies**
@@ -137,4 +137,4 @@ A quick look at the top-level files and directories you'll see in my project.
 
 Created by **[@devmaroy](https://twitter.com/devmaroy)** feel free to contact me
 
-e-mail: **[hello@devmaroy.com](mailto:hello@devmaroy.com?subject=[GitHub]%20zoova_cu_cl_ga_md_en)**
+e-mail: **[hello@devmaroy.com](mailto:hello@devmaroy.com?subject=[GitHub]%20zoova_cu_cl_ga_hc_en)**
