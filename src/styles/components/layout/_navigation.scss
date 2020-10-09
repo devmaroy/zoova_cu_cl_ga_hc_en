@@ -110,6 +110,7 @@
   text-transform: uppercase;
   font-size: $fs-sm;
   font-weight: $fw-semi-bold;
+  cursor: pointer;
 
   &--active {
     color: $clr-primary;

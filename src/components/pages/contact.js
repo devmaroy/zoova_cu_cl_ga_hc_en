@@ -8,6 +8,7 @@ const Contact = () => {
 
   return (
     <section
+      id="contact"
       className="section banner-area  contact"
       style={{ backgroundImage: `url( ${contactBg} )` }}
     >

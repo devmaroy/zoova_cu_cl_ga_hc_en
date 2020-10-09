@@ -12,7 +12,7 @@ const About = () => {
   const triggerAnimationCardsRef = useRef();
 
   return (
-    <section className="section about divider-space-section">
+    <section id="about" className="section about divider-space-section">
       <div className="container">
         <div className="about__inner">
           <SectionHeader

@@ -7,7 +7,7 @@ const FAQ = () => {
   const triggerAnimationRef = useRef();
 
   return (
-    <section className="section faq divider-space-section">
+    <section id="faq" className="section faq divider-space-section">
       <div className="container">
         <div className="faq__inner">
           <SectionHeader

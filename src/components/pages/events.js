@@ -10,7 +10,7 @@ import eventImg6 from '../../images/pages/events/event-06.jpg';
 
 const Events = () => {
   return (
-    <section className="section events divider-space-section">
+    <section id="events" className="section events divider-space-section">
       <div className="container">
         <div className="events__inner">
           <SectionHeader
