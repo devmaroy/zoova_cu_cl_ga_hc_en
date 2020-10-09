@@ -1,31 +1,38 @@
 import React, { useState } from 'react';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import { Link } from 'gatsby';
 import classNames from 'classnames';
 import { Tween } from 'react-gsap';
 
+// Data
+const navigation = [
+  {
+    id: '969d5312-0a47-11eb-adc1-0242ac120002',
+    name: 'Home',
+    url: '/',
+  },
+  {
+    id: '86af04a0-0a47-11eb-adc1-0242ac120002',
+    name: 'About',
+    url: '#about',
+  },
+  {
+    id: '92e50f3a-0a47-11eb-adc1-0242ac120002',
+    name: 'Gallery',
+    url: '#gallery',
+  },
+  {
+    id: '8eb3e490-0a47-11eb-adc1-0242ac120002',
+    name: 'FAQ',
+    url: '#faq',
+  },
+  {
+    id: '8b30e9f8-0a47-11eb-adc1-0242ac120002',
+    name: 'Contact',
+    url: '#contact',
+  },
+];
+
 // Query
-const query = graphql`
-  query Navigation {
-    navigation: allFile(
-      filter: {
-        internal: { mediaType: { eq: "text/markdown" } }
-        sourceInstanceName: { eq: "markdown" }
-        relativeDirectory: { regex: "/navigation/" }
-      }
-      sort: { fields: [childMarkdownRemark___frontmatter___order], order: ASC }
-    ) {
-      nodes {
-        childMarkdownRemark {
-          frontmatter {
-            id
-            name
-            url
-          }
-        }
-      }
-    }
-  }
-`;
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,11 +40,6 @@ const Navigation = () => {
   const toggleNavigation = () => {
     setIsOpen(!isOpen);
   };
-
-  const data = useStaticQuery(query);
-  const navigation = data.navigation.nodes;
-
-  console.log(navigation);
 
   return (
     <>
@@ -73,20 +75,17 @@ const Navigation = () => {
             ease="power1.out"
             stagger={0.2}
           >
-            {navigation.map(
-              ({ childMarkdownRemark: item }) =>
-                console.log(item) || (
-                  <li key={item.frontmatter.id} className="navigation__item">
-                    <Link
-                      to={item.frontmatter.url}
-                      className="navigation__link"
-                      activeClassName="navigation__link--active"
-                    >
-                      {item.frontmatter.name}
-                    </Link>
-                  </li>
-                ),
-            )}
+            {navigation.map(({ id, name, url }) => (
+              <li key={id} className="navigation__item">
+                <Link
+                  to={url}
+                  className="navigation__link"
+                  activeClassName="navigation__link--active"
+                >
+                  {name}
+                </Link>
+              </li>
+            ))}
           </Tween>
         </ul>
       </nav>
