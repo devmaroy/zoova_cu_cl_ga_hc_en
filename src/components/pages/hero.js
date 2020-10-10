@@ -1,13 +1,36 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import { Tween } from 'react-gsap';
-import heroBg from '../../images/pages/hero/hero-bg-2.jpg';
+import BackgroundImage from 'gatsby-background-image';
+
+// Query
+const query = graphql`
+  query heroImages {
+    allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        name: { eq: "hero-bg-2" }
+      }
+    ) {
+      nodes {
+        childImageSharp {
+          fluid(maxWidth: 1920) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  }
+`;
 
 const Hero = () => {
+  const data = useStaticQuery(query);
+  const image = data.allFile.nodes[0].childImageSharp.fluid;
+
   return (
-    <div
+    <BackgroundImage
+      fluid={image}
       className="banner-area banner-area--top banner-area--large hero"
-      style={{ backgroundImage: `url( ${heroBg} )` }}
     >
       <div className="banner-area__inner hero__inner container">
         <Tween
@@ -38,7 +61,7 @@ const Hero = () => {
           </div>
         </Tween>
       </div>
-    </div>
+    </BackgroundImage>
   );
 };
 

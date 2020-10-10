@@ -2,6 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
+import BackgroundImage from 'gatsby-background-image';
 import classNames from 'classnames';
 
 const Card = ({
@@ -16,12 +17,7 @@ const Card = ({
   return (
     <div className={classNames('card', { 'card--featured': featured })}>
       <div className="card__wrapper">
-        {image && (
-          <div
-            className="card__image"
-            style={{ backgroundImage: `url(${image})` }}
-          />
-        )}
+        {image && <BackgroundImage fluid={image} className="card__image" />}
 
         <div className="card__inner">
           {icon && (
@@ -57,7 +53,13 @@ const Card = ({
 
 Card.propTypes = {
   featured: PropTypes.bool,
-  image: PropTypes.string,
+  image: PropTypes.shape({
+    aspectRatio: PropTypes.number.isRequired,
+    base64: PropTypes.string.isRequired,
+    sizes: PropTypes.string.isRequired,
+    src: PropTypes.string.isRequired,
+    srcSet: PropTypes.string.isRequired,
+  }),
   icon: PropTypes.string,
   heading: PropTypes.string.isRequired,
   headingHighlight: PropTypes.string,

@@ -1,16 +1,41 @@
 import React, { useRef } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import { Reveal, Tween } from 'react-gsap';
+import BackgroundImage from 'gatsby-background-image';
 import SectionHeader from '../common/sectionHeader';
-import contactBg from '../../images/pages/contact/contact-bg.jpg';
+
+// Query
+const query = graphql`
+  query contactImages {
+    allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        name: { eq: "contact-bg" }
+      }
+    ) {
+      nodes {
+        childImageSharp {
+          fluid(maxWidth: 1920) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  }
+`;
 
 const Contact = () => {
   const triggerAnimationRef = useRef();
 
+  const data = useStaticQuery(query);
+  const image = data.allFile.nodes[0].childImageSharp.fluid;
+
   return (
-    <section
+    <BackgroundImage
       id="contact"
+      fluid={image}
+      Tag="section"
       className="section banner-area  contact"
-      style={{ backgroundImage: `url( ${contactBg} )` }}
     >
       <div className="banner-area__inner contact__inner container">
         <SectionHeader
@@ -97,7 +122,7 @@ const Contact = () => {
           </Reveal>
         </div>
       </div>
-    </section>
+    </BackgroundImage>
   );
 };
 

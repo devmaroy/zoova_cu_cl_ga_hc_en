@@ -1,14 +1,39 @@
 import React, { useRef } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import BackgroundImage from 'gatsby-background-image';
 import SectionHeader from '../common/sectionHeader';
-import messageBg from '../../images/pages/message/message-bg.jpg';
+
+// Query
+const query = graphql`
+  query messageImages {
+    allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        name: { eq: "message-bg" }
+      }
+    ) {
+      nodes {
+        childImageSharp {
+          fluid(maxWidth: 1920) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  }
+`;
 
 const Message = () => {
   const triggerAnimationRef = useRef();
 
+  const data = useStaticQuery(query);
+  const image = data.allFile.nodes[0].childImageSharp.fluid;
+
   return (
-    <section
+    <BackgroundImage
+      fluid={image}
+      Tag="section"
       className="section banner-area message"
-      style={{ backgroundImage: `url( ${messageBg} )` }}
     >
       <div
         className="banner-area__inner message__inner container"
@@ -30,7 +55,7 @@ const Message = () => {
           </p>
         </SectionHeader>
       </div>
-    </section>
+    </BackgroundImage>
   );
 };
 

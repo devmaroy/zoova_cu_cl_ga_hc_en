@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
+import Img from 'gatsby-image';
 import { Reveal, Tween } from 'react-gsap';
 
 const Gallery = ({ items }) => {
@@ -14,10 +15,10 @@ const Gallery = ({ items }) => {
           stagger={0.2}
         >
           {items.map(({ image, heading, headingHighlight }) => (
-            <div key={image} className="gallery__item">
+            <div key={heading} className="gallery__item">
               <div className="gallery__image-wrapper">
-                <img
-                  src={image}
+                <Img
+                  fluid={image}
                   className="gallery__image"
                   alt="Gallery item"
                 />
@@ -41,7 +42,13 @@ const Gallery = ({ items }) => {
 Gallery.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      image: PropTypes.string.isRequired,
+      image: PropTypes.shape({
+        aspectRatio: PropTypes.number.isRequired,
+        base64: PropTypes.string.isRequired,
+        sizes: PropTypes.string.isRequired,
+        src: PropTypes.string.isRequired,
+        srcSet: PropTypes.string.isRequired,
+      }).isRequired,
       heading: PropTypes.string,
       headingHighlight: PropTypes.string,
     }).isRequired,

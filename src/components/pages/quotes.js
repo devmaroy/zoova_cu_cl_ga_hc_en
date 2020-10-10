@@ -1,8 +1,29 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useRef } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import Slider from 'react-slick';
+import BackgroundImage from 'gatsby-background-image';
 import { Reveal, Tween } from 'react-gsap';
-import quotesBg from '../../images/pages/quotes/quotes-bg.jpg';
+
+// Query
+const query = graphql`
+  query quotesImages {
+    allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        name: { eq: "quotes-bg" }
+      }
+    ) {
+      nodes {
+        childImageSharp {
+          fluid(maxWidth: 1920) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  }
+`;
 
 const quotes = [
   {
@@ -33,10 +54,14 @@ const Quotes = () => {
 
   const triggerAnimationRef = useRef();
 
+  const data = useStaticQuery(query);
+  const image = data.allFile.nodes[0].childImageSharp.fluid;
+
   return (
-    <section
+    <BackgroundImage
+      fluid={image}
+      Tag="section"
       className="section banner-area quotes"
-      style={{ backgroundImage: `url( ${quotesBg} )` }}
     >
       <div
         className="banner-area__inner quotes__inner container"
@@ -61,7 +86,7 @@ const Quotes = () => {
           </Tween>
         </Reveal>
       </div>
-    </section>
+    </BackgroundImage>
   );
 };
 

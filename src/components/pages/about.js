@@ -1,15 +1,35 @@
 import React, { useRef } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import { Reveal, Tween } from 'react-gsap';
 import SectionHeader from '../common/sectionHeader';
 import Card from '../common/card';
-import cardImage from '../../images/pages/about/event-01.jpg';
 import cardIconUsers from '../../images/icons/users.svg';
 import cardIconEvent from '../../images/icons/event.svg';
 import cardIconHeart from '../../images/icons/heart.svg';
 import cardIconMoney from '../../images/icons/money.svg';
 
+// Query
+const query = graphql`
+  query aboutImages {
+    allFile(
+      filter: { sourceInstanceName: { eq: "images" }, name: { eq: "about-01" } }
+    ) {
+      nodes {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  }
+`;
+
 const About = () => {
   const triggerAnimationCardsRef = useRef();
+
+  const data = useStaticQuery(query);
+  const image = data.allFile.nodes[0].childImageSharp.fluid;
 
   return (
     <section id="about" className="section about divider-space-section">
@@ -44,7 +64,7 @@ const About = () => {
                 <div className="about__item">
                   <Card
                     featured
-                    image={cardImage}
+                    image={image}
                     date="May 15, 2018"
                     heading="A Cup Of Tea With People"
                   >

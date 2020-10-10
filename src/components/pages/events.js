@@ -1,14 +1,33 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import SectionHeader from '../common/sectionHeader';
 import Gallery from '../common/gallery';
-import eventImg1 from '../../images/pages/events/event-01.jpg';
-import eventImg2 from '../../images/pages/events/event-02.jpg';
-import eventImg3 from '../../images/pages/events/event-03.jpg';
-import eventImg4 from '../../images/pages/events/event-04.jpg';
-import eventImg5 from '../../images/pages/events/event-05.jpg';
-import eventImg6 from '../../images/pages/events/event-06.jpg';
+
+// Query
+const query = graphql`
+  query eventsImages {
+    allFile(
+      filter: {
+        sourceInstanceName: { eq: "images" }
+        relativeDirectory: { eq: "pages/events" }
+      }
+      sort: { fields: [name], order: ASC }
+    ) {
+      nodes {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  }
+`;
 
 const Events = () => {
+  const data = useStaticQuery(query);
+  const images = data.allFile.nodes;
+
   return (
     <section id="events" className="section events divider-space-section">
       <div className="container">
@@ -32,32 +51,32 @@ const Events = () => {
             <Gallery
               items={[
                 {
-                  image: eventImg1,
+                  image: images[0].childImageSharp.fluid,
                   heading: 'Marathon',
                   headingHighlight: 'Zoova',
                 },
                 {
-                  image: eventImg2,
+                  image: images[1].childImageSharp.fluid,
                   heading: 'Concert',
                   headingHighlight: 'Public',
                 },
                 {
-                  image: eventImg3,
+                  image: images[2].childImageSharp.fluid,
                   heading: 'Gym Class',
                   headingHighlight: 'Open',
                 },
                 {
-                  image: eventImg4,
+                  image: images[3].childImageSharp.fluid,
                   heading: 'Lunch',
                   headingHighlight: 'Free',
                 },
                 {
-                  image: eventImg5,
+                  image: images[4].childImageSharp.fluid,
                   heading: 'Dance Class',
                   headingHighlight: 'Sponsored',
                 },
                 {
-                  image: eventImg6,
+                  image: images[5].childImageSharp.fluid,
                   heading: 'Together',
                   headingHighlight: 'Travel',
                 },
