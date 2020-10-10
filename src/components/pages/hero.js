@@ -7,10 +7,7 @@ import BackgroundImage from 'gatsby-background-image';
 const query = graphql`
   query heroImages {
     allFile(
-      filter: {
-        sourceInstanceName: { eq: "images" }
-        name: { eq: "hero-bg-2" }
-      }
+      filter: { sourceInstanceName: { eq: "images" }, name: { eq: "hero-bg" } }
     ) {
       nodes {
         childImageSharp {
