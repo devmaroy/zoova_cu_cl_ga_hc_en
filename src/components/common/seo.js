@@ -9,11 +9,13 @@ const query = graphql`
     site {
       siteMetadata {
         lang
+        locale
         title
         titleSimplified
         description
         twitterHandle
         siteUrl
+        siteName
         image
         author
       }
@@ -49,8 +51,10 @@ const SEO = ({
 
   // Meta fields
   const metaDescription = description || siteMetadata.description;
+  const metaLocale = siteMetadata.locale;
   const metaTwitterHandle = twitterHandle || siteMetadata.twitterHandle;
   const metaUrl = siteUrl || siteMetadata.siteUrl;
+  const metaName = siteUrl || siteMetadata.siteName;
   const metaImage = image || siteMetadata.image;
   const metaAuthor = author || siteMetadata.author;
 
@@ -65,6 +69,22 @@ const SEO = ({
           content: metaDescription,
         },
         {
+          name: `og:locale`,
+          content: metaLocale,
+        },
+        {
+          name: `og:type`,
+          content: `website`,
+        },
+        {
+          name: `og:url`,
+          content: metaUrl,
+        },
+        {
+          name: `og:site_name`,
+          content: metaName,
+        },
+        {
           name: `og:title`,
           content: helmetTitle,
         },
@@ -73,24 +93,16 @@ const SEO = ({
           content: metaDescription,
         },
         {
-          name: `og:type`,
-          content: `website`,
-        },
-        {
           name: `og:image`,
-          content: metaImage,
+          content: metaUrl + metaImage,
         },
         {
-          name: `og:url`,
-          content: metaUrl,
+          name: `og:image:alt`,
+          content: ``,
         },
         {
           name: `twitter:card`,
           content: `summary_large_image`,
-        },
-        {
-          name: `twitter:creator`,
-          content: metaTwitterHandle,
         },
         {
           name: `twitter:title`,
@@ -98,11 +110,15 @@ const SEO = ({
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: description,
         },
         {
           name: `twitter:image`,
-          content: metaImage,
+          content: metaUrl + metaImage,
+        },
+        {
+          name: `twitter:creator`,
+          content: metaTwitterHandle,
         },
         {
           name: `author`,

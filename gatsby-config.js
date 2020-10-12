@@ -1,14 +1,16 @@
 module.exports = {
   siteMetadata: {
     lang: `en`,
+    locale: `en_US`,
     title: `Zoova Foundation: Official website of the Zoova Foundation`,
     titleSimplified: `Zoova Foundation`,
     description: `Official website of the Zoova Foundation.`,
-    author: `devmaroy`,
-    twitterHandle: `@devmaroy`,
+    author: `zoova.foundation`,
+    twitterHandle: `@zoova.foundation`,
     email: `hello@devmaroy.com`,
     siteUrl: `https://zoova.marekmatejovic.com/`,
-    image: `${__dirname}/src/images/social/twitter-share.png`,
+    siteName: `Zoova Foundation`,
+    image: '/images/social/social.png',
     socialMedia: {
       facebook: `https://www.facebook.com/zoova.foundation`,
       twitter: `https://www.twitter.com/zoova.foundation`,
