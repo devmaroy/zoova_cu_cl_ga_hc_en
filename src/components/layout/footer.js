@@ -8,7 +8,6 @@ const query = graphql`
   query Footer {
     site {
       siteMetadata {
-        author
         copyright {
           name
           rights
@@ -23,7 +22,7 @@ const query = graphql`
 const Footer = () => {
   const triggerAnimationRef = useRef();
   const data = useStaticQuery(query);
-  const { author, copyright } = data.site.siteMetadata;
+  const { copyright } = data.site.siteMetadata;
 
   return (
     <footer className="footer">
@@ -46,7 +45,7 @@ const Footer = () => {
                   <p>
                     Made with <span className="footer__highlight">love</span> by{' '}
                     <a href={copyright.authorUrl} className="footer__link">
-                      {author}
+                      {copyright.author}
                     </a>
                   </p>
                 </div>
