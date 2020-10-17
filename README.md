@@ -4,7 +4,7 @@
 
 This project is powered by **Gatsby** and is created for a client.
 
-Build with hard coded data.
+Created with hard coded data.
 
 <br>
 
