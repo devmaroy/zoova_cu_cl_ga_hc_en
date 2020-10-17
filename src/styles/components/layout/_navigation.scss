@@ -2,9 +2,8 @@
   # Navigation
 \*------------------------------------*/
 
-// 920px
-
 .navigation-toggle {
+  visibility: hidden;
   @include reset-appearance;
   position: absolute;
   top: 0.5rem;

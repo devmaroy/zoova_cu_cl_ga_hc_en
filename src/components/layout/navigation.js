@@ -44,30 +44,32 @@ const Navigation = () => {
 
   return (
     <>
-      <button
-        type="button"
-        className="navigation-toggle"
-        onClick={toggleNavigation}
-      >
-        <div
-          className={classNames(
-            'navigation-toggle__bar navigation-toggle__bar--one',
-            { 'is-open': isOpen },
-          )}
-        />
-        <div
-          className={classNames(
-            'navigation-toggle__bar navigation-toggle__bar--two',
-            { 'is-open': isOpen },
-          )}
-        />
-        <div
-          className={classNames(
-            'navigation-toggle__bar navigation-toggle__bar--three',
-            { 'is-open': isOpen },
-          )}
-        />
-      </button>
+      <Tween from={{ autoAlpha: 0, y: '-50', opacity: 0 }} ease="power1.out">
+        <button
+          type="button"
+          className="navigation-toggle"
+          onClick={toggleNavigation}
+        >
+          <div
+            className={classNames(
+              'navigation-toggle__bar navigation-toggle__bar--one',
+              { 'is-open': isOpen },
+            )}
+          />
+          <div
+            className={classNames(
+              'navigation-toggle__bar navigation-toggle__bar--two',
+              { 'is-open': isOpen },
+            )}
+          />
+          <div
+            className={classNames(
+              'navigation-toggle__bar navigation-toggle__bar--three',
+              { 'is-open': isOpen },
+            )}
+          />
+        </button>
+      </Tween>
 
       <nav className={classNames('navigation', { 'is-open': isOpen })}>
         <ul className="navigation__list">
